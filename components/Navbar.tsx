@@ -38,18 +38,18 @@ export default function Navbar() {
         zIndex: 1000, display: 'none',
       }} className="topbar-desktop">
         <div style={{ maxWidth: 1320, margin: '0 auto', padding: '0 32px', height: 36, display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          <span style={{ fontSize: 11, color: '#475569', fontStyle: 'italic', fontFamily: 'Cormorant Garamond, serif' }}>
+          <span style={{ fontSize: 11, color: '#94a3b8', fontStyle: 'italic', fontFamily: 'Cormorant Garamond, serif' }}>
             British Council Trained · Contracted Education Advisor · Est. 2010
           </span>
           <div style={{ display: 'flex', gap: 24 }}>
-            <a href="tel:+2349083353549" style={{ fontSize: 11, color: '#475569', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 5, transition: 'color .2s' }}
+            <a href="tel:+2349083353549" style={{ fontSize: 11, color: '#94a3b8', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 5, transition: 'color .2s' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#c9a84c')}
-              onMouseLeave={e => (e.currentTarget.style.color = '#475569')}>
+              onMouseLeave={e => (e.currentTarget.style.color = '#94a3b8')}>
               <Phone size={10} /> +234 908 335 3549
             </a>
-            <a href="mailto:info@wcent.co.uk" style={{ fontSize: 11, color: '#475569', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 5, transition: 'color .2s' }}
+            <a href="mailto:info@wcent.co.uk" style={{ fontSize: 11, color: '#94a3b8', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 5, transition: 'color .2s' }}
               onMouseEnter={e => (e.currentTarget.style.color = '#c9a84c')}
-              onMouseLeave={e => (e.currentTarget.style.color = '#475569')}>
+              onMouseLeave={e => (e.currentTarget.style.color = '#94a3b8')}>
               <Mail size={10} /> info@wcent.co.uk
             </a>
           </div>
