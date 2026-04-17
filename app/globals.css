@@ -102,13 +102,25 @@ body{
 .tcard:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(15,61,46,.08)}
 
 /* ─── ICON BOX ─── */
+.icon-sq{
+  width:50px;height:50px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .3s;
+}
+
 .icon-box{
   width:50px;height:50px;flex-shrink:0;
   background:rgba(200,169,100,.1);
   border:1px solid rgba(200,169,100,.22);
   display:flex;align-items:center;justify-content:center;transition:all .3s;
 }
-.card-ivory:hover .icon-box,.glass:hover .icon-box{
+.card-ivory:hover .icon-box,.glass:hover .icon-sq{
+  width:50px;height:50px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  transition:all .3s;
+}
+
+.icon-box{
   background:rgba(200,169,100,.18);border-color:rgba(200,169,100,.5);
 }
 
@@ -231,4 +243,78 @@ body{
   .col-footer{grid-template-columns:1fr}
   .col-steps{grid-template-columns:1fr}
   .col-vid-3{grid-template-columns:1fr}
+}
+
+/* ── Hover cards via CSS (no JS event handlers needed) ── */
+.hover-card {
+  transition: transform .35s cubic-bezier(.4,0,.2,1), box-shadow .35s ease, border-color .3s ease;
+}
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 56px rgba(15,61,46,.12);
+  border-color: rgba(200,169,100,.3) !important;
+}
+.hover-card-dark:hover {
+  border-color: rgba(200,169,100,.35) !important;
+}
+
+/* ── Light card base ── */
+.lcard {
+  background: white;
+  border: 1px solid rgba(15,61,46,.1);
+  padding: 32px 28px;
+}
+
+/* ── Ivory section ── */
+.bg-ivory  { background: #F5F1E6; }
+.bg-ivory2 { background: #EDE9DA; }
+.bg-forest { background: #0F3D2E; }
+.bg-ink    { background: #081B15; }
+
+/* ── Typography helpers ── */
+.text-forest { color: #0F3D2E; }
+.text-body   { color: #4d6b5a; font-family: 'Inter', sans-serif; }
+.text-muted  { color: #6b8e7f; font-family: 'Inter', sans-serif; }
+.text-ivory  { color: #F5F1E6; }
+.text-gold   { color: #C8A964; }
+
+/* ── Tag pill ── */
+.tag-pill {
+  display: inline-block;
+  background: linear-gradient(135deg,#C8A964,#dfc07a);
+  color: #081B15;
+  font-size: .56rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── Form field light ── */
+.field-light {
+  width: 100%;
+  background: white;
+  border: 1px solid rgba(15,61,46,.18);
+  padding: 12px 15px;
+  font-family: 'Inter', sans-serif;
+  font-size: .875rem;
+  color: #0F3D2E;
+  outline: none;
+  transition: border-color .25s, box-shadow .25s;
+}
+.field-light:focus {
+  border-color: #C8A964;
+  box-shadow: 0 0 0 3px rgba(200,169,100,.1);
+}
+.field-light::placeholder { color: #8aab9a; }
+
+/* ── Section padding consistent ── */
+.pad-section  { padding: 5rem 0; }
+.pad-section-sm { padding: 3rem 0; }
+
+/* ── Mobile: stack everything ── */
+@media (max-width: 768px) {
+  .lcard { padding: 22px 18px; }
+  .pad-section { padding: 3.5rem 0; }
 }
