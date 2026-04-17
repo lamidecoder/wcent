@@ -5,117 +5,154 @@ import { FadeUp, Stagger, Item } from '@/components/Animate'
 import Img from '@/components/Img'
 
 const POSTS = [
-  { cat:'Visa Guide',   title:'UK Student Visa 2025: Everything Nigerian Students Need to Know',     excerpt:'A complete breakdown of the application process — documents, timelines, and common mistakes to avoid.',                      img:'https://images.unsplash.com/photo-1569389397653-c04fe624e663?w=800&q=70', read:'8 min', date:'March 2025' },
-  { cat:'Study Abroad', title:'Choosing Between the UK and Canada: A Nigerian Student\'s Guide',     excerpt:'We compare costs, lifestyle, post-study work options, and more to help you decide which fits your goals.',                   img:'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=800&q=70', read:'6 min', date:'Feb 2025' },
-  { cat:'Admissions',   title:'How to Write a Winning Personal Statement for UK Universities',       excerpt:'Practical tips from our counsellors on crafting a compelling statement that increases your chances.',                          img:'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&q=70', read:'5 min', date:'Jan 2025' },
-  { cat:'Finance',      title:'Scholarships for Nigerian Students Studying in the UK in 2025',      excerpt:'From Chevening to Commonwealth — a curated list of funding opportunities for Nigerian applicants.',                          img:'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=70', read:'7 min', date:'Dec 2024' },
-  { cat:'Student Life', title:'Your First Month in the UK as a Nigerian Student',                   excerpt:'Culture shock, banking, NHS registration — our alumni share the realities of life in Britain.',                             img:'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&q=70', read:'6 min', date:'Nov 2024' },
-  { cat:'Visa Guide',   title:'Canada Student Permit Guide for Nigerians (2025)',                   excerpt:'Step-by-step instructions on how to apply for a Canadian study permit, including biometrics and IRCC portals.',             img:'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=800&q=70', read:'9 min', date:'Oct 2024' },
+  { cat:'Visa Guide',   title:'UK Student Visa 2025: Everything Nigerian Students Need to Know',   excerpt:'A complete breakdown of the application process — documents, timelines, and common mistakes to avoid.',              img:'https://images.unsplash.com/photo-1569389397653-c04fe624e663?w=800&q=70', read:'8 min', date:'March 2025' },
+  { cat:'Study Abroad', title:'Choosing Between the UK and Canada: A Nigerian Student\'s Guide',   excerpt:'We compare costs, lifestyle, post-study work options, and more to help you decide which country fits your goals.', img:'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=800&q=70', read:'6 min', date:'Feb 2025' },
+  { cat:'Admissions',   title:'How to Write a Winning Personal Statement for UK Universities',     excerpt:'Practical tips from our counsellors on crafting a compelling statement that increases your chances.',               img:'https://images.unsplash.com/photo-1471107340929-a87cd0f5b5f3?w=800&q=70', read:'5 min', date:'Jan 2025' },
+  { cat:'Finance',      title:'Scholarships for Nigerian Students Studying in the UK in 2025',    excerpt:'From Chevening to Commonwealth — a curated list of funding opportunities for Nigerian applicants.',               img:'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=70', read:'7 min', date:'Dec 2024' },
+  { cat:'Student Life', title:'Your First Month in the UK as a Nigerian Student',                 excerpt:'Culture shock, banking, NHS registration — our alumni share the realities of life in Britain.',                  img:'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=800&q=70', read:'6 min', date:'Nov 2024' },
+  { cat:'Visa Guide',   title:'Canada Student Permit Guide for Nigerians (2025)',                 excerpt:'Step-by-step instructions on how to apply for a Canadian study permit, biometrics and IRCC portals.',             img:'https://images.unsplash.com/photo-1503614472-8c93d56e92ce?w=800&q=70', read:'9 min', date:'Oct 2024' },
 ]
+
+function PostCard({ p }: { p: typeof POSTS[0] }) {
+  return (
+    <div style={{ background: 'white', border: '1px solid rgba(15,61,46,.1)', overflow: 'hidden', transition: 'all .35s ease' }}
+      onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.transform = 'translateY(-5px)'; el.style.boxShadow = '0 20px 50px rgba(15,61,46,.1)'; el.style.borderColor = 'rgba(200,169,100,.3)' }}
+      onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.transform = 'translateY(0)'; el.style.boxShadow = 'none'; el.style.borderColor = 'rgba(15,61,46,.1)' }}>
+      <div style={{ position: 'relative', height: 160, overflow: 'hidden' }}>
+        <Img src={p.img} alt={p.title} fill />
+        <div style={{ position: 'absolute', top: 10, left: 10 }}>
+          <span style={{ background: 'linear-gradient(135deg,#C8A964,#dfc07a)', color: '#081B15', fontSize: '.54rem', fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', padding: '3px 9px', fontFamily: 'Inter, sans-serif' }}>{p.cat}</span>
+        </div>
+      </div>
+      <div style={{ padding: '18px 18px 20px' }}>
+        <h3 style={{ fontWeight: 600, color: '#0F3D2E', fontSize: 13, lineHeight: 1.5, marginBottom: 8, fontFamily: 'Inter, sans-serif' }}>{p.title}</h3>
+        <p style={{ color: '#4d6b5a', fontSize: 12, lineHeight: 1.7, marginBottom: 14, fontFamily: 'Inter, sans-serif' }} className="clamp2">{p.excerpt}</p>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <span style={{ fontSize: 11, color: '#8aab9a', display: 'flex', alignItems: 'center', gap: 4, fontFamily: 'Inter, sans-serif' }}><Clock size={10} />{p.read} · {p.date}</span>
+          <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 3, color: '#0F3D2E', fontSize: '.62rem', fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'Inter, sans-serif' }}>Read <ArrowRight size={10} /></Link>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function BlogPage() {
   return (<>
-    <section className="page-hero"><div className="wrap" style={{ position:'relative', zIndex:1, textAlign:'center' }}>
-      <FadeUp>
-        <p className="eyebrow" style={{ marginBottom:14 }}>Knowledge Hub</p>
-        <h1 className="fd" style={{ fontSize:'clamp(2.5rem,5vw,4.5rem)', fontWeight:300, color:'#fff', lineHeight:1.1 }}>Resources & <em style={{ color:'#c9a84c' }}>Insights</em></h1>
-      </FadeUp>
-    </div></section>
-
-    <section style={{ background:'#040b16', padding:'2rem 0' }}><div className="wrap">
-      <div className="col-3">
-        {[
-          { t:'UK Application Checklist', d:'Download our complete checklist for UK university applications.' },
-          { t:'IELTS Preparation Guide',  d:'Everything you need to know to pass IELTS for admission.' },
-          { t:'Free Monthly Webinars',    d:'Join our live sessions with education advisors. Register now.' },
-        ].map((r,i)=>(
-          <div key={i} className="glass" style={{ padding:'13px 16px', display:'flex', gap:11, cursor:'pointer' }}>
-            <BookOpen size={15} color="#c9a84c" style={{ flexShrink:0, marginTop:2 }} />
-            <div>
-              <p style={{ color:'#fff', fontSize:12, fontWeight:600, marginBottom:2, fontFamily:'Space Grotesk,sans-serif' }}>{r.t}</p>
-              <p style={{ color:'#475569', fontSize:11 }}>{r.d}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-    </div></section>
-
-    <section className="section-darker"><div className="wrap">
-      <FadeUp style={{ marginBottom:36 }}>
-        <p className="eyebrow" style={{ marginBottom:10 }}>Latest Articles</p>
-        <h2 className="fd" style={{ fontSize:'clamp(1.8rem,3vw,2.5rem)', fontWeight:300, color:'#fff' }}>Expert Guides & Advice</h2>
-      </FadeUp>
-
-      {/* Featured */}
-      <div className="col-blog-featured">
+    {/* Hero */}
+    <section className="page-hero">
+      <div className="wrap" style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
         <FadeUp>
-          <div className="glass" style={{ overflow:'hidden' }}>
-            <div style={{ position:'relative', height:260, overflow:'hidden' }}>
-              <Img src={POSTS[0].img} alt={POSTS[0].title} fill />
-              <div style={{ position:'absolute', inset:0, background:'linear-gradient(to top,rgba(7,16,31,.85) 0%,transparent 50%)' }} />
-              <div style={{ position:'absolute', top:12, left:12 }}><span className="badge">{POSTS[0].cat}</span></div>
-              <div style={{ position:'absolute', bottom:14, left:14, right:14 }}>
-                <h3 className="fd" style={{ color:'#fff', fontSize:'1.2rem', fontWeight:500, lineHeight:1.3 }}>{POSTS[0].title}</h3>
-              </div>
-            </div>
-            <div style={{ padding:20 }}>
-              <p style={{ color:'#64748b', fontSize:12, lineHeight:1.72, marginBottom:12 }}>{POSTS[0].excerpt}</p>
-              <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
-                <span style={{ fontSize:11, color:'#475569', display:'flex', alignItems:'center', gap:4 }}><Clock size={10}/>{POSTS[0].read} · {POSTS[0].date}</span>
-                <Link href="/contact" style={{ display:'inline-flex', alignItems:'center', gap:4, color:'#c9a84c', fontSize:'.62rem', fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', textDecoration:'none', fontFamily:'Space Grotesk,sans-serif' }}>Read <ArrowRight size={10}/></Link>
-              </div>
-            </div>
-          </div>
+          <p className="eyebrow" style={{ marginBottom: 14 }}>Knowledge Hub</p>
+          <h1 className="fd" style={{ fontSize: 'clamp(2.4rem,5vw,4.2rem)', fontWeight: 300, color: '#F5F1E6', lineHeight: 1.1 }}>
+            Resources & <em style={{ color: '#C8A964' }}>Insights</em>
+          </h1>
         </FadeUp>
+      </div>
+    </section>
 
-        <div style={{ display:'flex', flexDirection:'column', gap:16 }}>
-          {POSTS.slice(1,3).map((p,i)=>(
-            <FadeUp key={i} delay={i*.08}>
-              <div className="glass" style={{ display:'flex', overflow:'hidden', minHeight:140 }}>
-                <div style={{ position:'relative', width:120, flexShrink:0 }}><Img src={p.img} alt={p.title} fill /></div>
-                <div style={{ padding:14, display:'flex', flexDirection:'column', justifyContent:'space-between', flex:1 }}>
-                  <div>
-                    <p className="eyebrow" style={{ fontSize:'.5rem', marginBottom:3 }}>{p.cat}</p>
-                    <h3 style={{ fontWeight:600, color:'#e2e8f0', fontSize:12, lineHeight:1.45, marginBottom:5 }}>{p.title}</h3>
-                    <p style={{ color:'#64748b', fontSize:11, lineHeight:1.55 }} className="clamp2">{p.excerpt}</p>
-                  </div>
-                  <Link href="/contact" style={{ display:'inline-flex', alignItems:'center', gap:3, color:'#c9a84c', fontSize:'.58rem', fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', textDecoration:'none', fontFamily:'Space Grotesk,sans-serif', marginTop:8 }}>Read <ArrowRight size={9}/></Link>
-                </div>
+    {/* Quick resources */}
+    <section style={{ background: '#0F3D2E', padding: '2.5rem 0' }}>
+      <div className="wrap">
+        <div className="col-3">
+          {[
+            { t: 'UK Application Checklist',  d: 'Download our complete checklist for UK university applications.' },
+            { t: 'IELTS Preparation Guide',   d: 'Everything you need to know to pass IELTS for university admission.' },
+            { t: 'Free Monthly Webinars',     d: 'Join our live sessions with education advisors. Register now.' },
+          ].map((r, i) => (
+            <div key={i} style={{ background: 'rgba(245,241,230,.05)', border: '1px solid rgba(200,169,100,.12)', padding: '14px 16px', display: 'flex', gap: 11, cursor: 'pointer', transition: 'border-color .2s' }}
+              onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(200,169,100,.35)')}
+              onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(200,169,100,.12)')}>
+              <BookOpen size={15} color="#C8A964" style={{ flexShrink: 0, marginTop: 2 }} />
+              <div>
+                <p style={{ color: '#F5F1E6', fontSize: 12.5, fontWeight: 600, marginBottom: 3, fontFamily: 'Inter, sans-serif' }}>{r.t}</p>
+                <p style={{ color: '#6b8e7f', fontSize: 11.5, fontFamily: 'Inter, sans-serif' }}>{r.d}</p>
               </div>
-            </FadeUp>
+            </div>
           ))}
         </div>
       </div>
+    </section>
 
-      <Stagger className="col-3" style={{ marginTop:0 }}>
-        {POSTS.slice(3).map(p=>(
-          <Item key={p.title}>
-            <div className="glass" style={{ overflow:'hidden' }}>
-              <div style={{ position:'relative', height:150, overflow:'hidden' }}>
-                <Img src={p.img} alt={p.title} fill />
-                <div style={{ position:'absolute', top:10, left:10 }}><span className="badge">{p.cat}</span></div>
+    {/* Articles */}
+    <section style={{ background: '#F5F1E6', padding: '5.5rem 0' }}>
+      <div className="wrap">
+        <FadeUp style={{ marginBottom: 36 }}>
+          <p className="eyebrow" style={{ marginBottom: 10 }}>Latest Articles</p>
+          <h2 className="fd" style={{ fontSize: 'clamp(1.8rem,3vw,2.5rem)', fontWeight: 300, color: '#0F3D2E' }}>Expert Guides & Advice</h2>
+        </FadeUp>
+
+        {/* Featured top row */}
+        <div style={{ display: 'grid', gridTemplateColumns: '1.4fr 1fr', gap: 24, marginBottom: 24 }} className="col-blog-featured">
+          {/* Big featured card */}
+          <FadeUp>
+            <div style={{ background: 'white', border: '1px solid rgba(15,61,46,.1)', overflow: 'hidden', transition: 'all .35s ease' }}
+              onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.transform = 'translateY(-5px)'; el.style.boxShadow = '0 20px 50px rgba(15,61,46,.1)' }}
+              onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.transform = 'translateY(0)'; el.style.boxShadow = 'none' }}>
+              <div style={{ position: 'relative', height: 260, overflow: 'hidden' }}>
+                <Img src={POSTS[0].img} alt={POSTS[0].title} fill />
+                <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top,rgba(8,27,21,.85) 0%,transparent 50%)' }} />
+                <div style={{ position: 'absolute', top: 14, left: 14 }}>
+                  <span style={{ background: 'linear-gradient(135deg,#C8A964,#dfc07a)', color: '#081B15', fontSize: '.56rem', fontWeight: 800, letterSpacing: '.1em', textTransform: 'uppercase', padding: '4px 10px', fontFamily: 'Inter, sans-serif' }}>{POSTS[0].cat}</span>
+                </div>
+                <div style={{ position: 'absolute', bottom: 16, left: 16, right: 16 }}>
+                  <h3 className="fd" style={{ color: '#F5F1E6', fontSize: '1.25rem', fontWeight: 500, lineHeight: 1.3 }}>{POSTS[0].title}</h3>
+                </div>
               </div>
-              <div style={{ padding:16 }}>
-                <h3 style={{ fontWeight:600, color:'#e2e8f0', fontSize:12, lineHeight:1.45, marginBottom:7 }}>{p.title}</h3>
-                <p style={{ color:'#64748b', fontSize:11, lineHeight:1.6, marginBottom:11 }} className="clamp2">{p.excerpt}</p>
-                <div style={{ display:'flex', justifyContent:'space-between', alignItems:'center' }}>
-                  <span style={{ fontSize:10, color:'#475569', display:'flex', alignItems:'center', gap:3 }}><Clock size={9}/>{p.read}</span>
-                  <Link href="/contact" style={{ display:'inline-flex', alignItems:'center', gap:3, color:'#c9a84c', fontSize:'.58rem', fontWeight:700, letterSpacing:'.1em', textTransform:'uppercase', textDecoration:'none', fontFamily:'Space Grotesk,sans-serif' }}>Read <ArrowRight size={9}/></Link>
+              <div style={{ padding: '20px 20px 22px' }}>
+                <p style={{ color: '#4d6b5a', fontSize: 13, lineHeight: 1.75, marginBottom: 14, fontFamily: 'Inter, sans-serif' }}>{POSTS[0].excerpt}</p>
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                  <span style={{ fontSize: 11.5, color: '#8aab9a', display: 'flex', alignItems: 'center', gap: 4, fontFamily: 'Inter, sans-serif' }}><Clock size={10} />{POSTS[0].read} · {POSTS[0].date}</span>
+                  <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 4, color: '#0F3D2E', fontSize: '.65rem', fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'Inter, sans-serif' }}>Read <ArrowRight size={10} /></Link>
                 </div>
               </div>
             </div>
-          </Item>
-        ))}
-      </Stagger>
-    </div></section>
+          </FadeUp>
 
-    <section className="section-dark" style={{ textAlign:'center' }}><div className="wrap" style={{ maxWidth:520 }}>
-      <FadeUp>
-        <p className="eyebrow" style={{ marginBottom:14 }}>Still Have Questions?</p>
-        <h2 className="fd" style={{ fontSize:'clamp(1.8rem,3vw,2.8rem)', fontWeight:300, color:'#fff', marginBottom:10 }}>Speak to an <em style={{ color:'#c9a84c' }}>Expert Advisor</em></h2>
-        <p style={{ color:'#475569', fontSize:13, lineHeight:1.8, marginBottom:24 }}>Nothing beats a one-on-one conversation. Book your free consultation today.</p>
-        <Link href="/contact" className="btn-primary">Book Free Consultation</Link>
-      </FadeUp>
-    </div></section>
+          {/* Two stacked */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 20 }}>
+            {POSTS.slice(1, 3).map((p, i) => (
+              <FadeUp key={i} delay={i * .08}>
+                <div style={{ background: 'white', border: '1px solid rgba(15,61,46,.1)', display: 'flex', overflow: 'hidden', minHeight: 140, transition: 'all .35s ease' }}
+                  onMouseEnter={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(200,169,100,.3)'; el.style.boxShadow = '0 8px 24px rgba(15,61,46,.08)' }}
+                  onMouseLeave={e => { const el = e.currentTarget as HTMLElement; el.style.borderColor = 'rgba(15,61,46,.1)'; el.style.boxShadow = 'none' }}>
+                  <div style={{ position: 'relative', width: 120, flexShrink: 0 }}><Img src={p.img} alt={p.title} fill /></div>
+                  <div style={{ padding: '14px 16px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
+                    <div>
+                      <p style={{ fontSize: '0.55rem', fontWeight: 700, letterSpacing: '.22em', textTransform: 'uppercase', color: '#C8A964', fontFamily: 'Inter, sans-serif', marginBottom: 5 }}>{p.cat}</p>
+                      <h3 style={{ fontWeight: 600, color: '#0F3D2E', fontSize: 12, lineHeight: 1.5, marginBottom: 5, fontFamily: 'Inter, sans-serif' }}>{p.title}</h3>
+                      <p style={{ color: '#4d6b5a', fontSize: 11, lineHeight: 1.6, fontFamily: 'Inter, sans-serif' }} className="clamp2">{p.excerpt}</p>
+                    </div>
+                    <Link href="/contact" style={{ display: 'inline-flex', alignItems: 'center', gap: 3, color: '#0F3D2E', fontSize: '.6rem', fontWeight: 700, letterSpacing: '.1em', textTransform: 'uppercase', textDecoration: 'none', fontFamily: 'Inter, sans-serif', marginTop: 8 }}>
+                      Read <ArrowRight size={9} />
+                    </Link>
+                  </div>
+                </div>
+              </FadeUp>
+            ))}
+          </div>
+        </div>
+
+        {/* Bottom grid */}
+        <Stagger className="col-3">
+          {POSTS.slice(3).map(p => <Item key={p.title}><PostCard p={p} /></Item>)}
+        </Stagger>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section style={{ background: '#0F3D2E', padding: '5rem 0', textAlign: 'center' }}>
+      <div className="wrap" style={{ maxWidth: 520 }}>
+        <FadeUp>
+          <p className="eyebrow" style={{ marginBottom: 14 }}>Still Have Questions?</p>
+          <h2 className="fd" style={{ fontSize: 'clamp(1.8rem,3vw,2.8rem)', fontWeight: 300, color: '#F5F1E6', marginBottom: 12, lineHeight: 1.2 }}>
+            Speak to an <em style={{ color: '#C8A964' }}>Expert Advisor</em>
+          </h2>
+          <p style={{ color: '#6b8e7f', fontSize: 14, lineHeight: 1.8, marginBottom: 28, fontFamily: 'Inter, sans-serif' }}>
+            Nothing beats a one-on-one conversation. Book your free consultation today.
+          </p>
+          <Link href="/contact" className="btn-primary">Book Free Consultation</Link>
+        </FadeUp>
+      </div>
+    </section>
   </>)
 }
