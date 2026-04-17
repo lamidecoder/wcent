@@ -287,7 +287,7 @@ export default function HomePage() {
             <SlideIn>
               <p className="eyebrow" style={{ marginBottom: 14 }}>Why Choose Us</p>
               <h2 className="fd" style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 300, color: '#F5F1E6', lineHeight: 1.2, marginBottom: 16 }}>
-                Ascent is never<br /><em style={{ color: '#C8A964' }}>a solo climb.</em>
+                Starting is never<br /><em style={{ color: '#C8A964' }}>a solo climb.</em>
               </h2>
               <p style={{ color: '#6b8e7f', fontSize: 14, lineHeight: 1.85, marginBottom: 36 }}>
                 Our founders personally studied in the UK and know every challenge Nigerian students face abroad. That lived experience is the heartbeat of everything we do.
