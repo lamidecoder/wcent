@@ -55,12 +55,12 @@ function SvcCard({ Icon, tag, title, desc, pts }: { Icon: LucideIcon; tag: strin
 
 const SVCS = [
   { Icon: GraduationCap, tag: 'Core',      title: 'Education Counselling',   desc: 'British Council trained advisors with 10+ years experience providing personalised academic guidance. One counsellor, with you from first meeting to enrolment.',   pts: ['One-on-one sessions', 'Career pathway planning', 'Academic assessment', 'BC-trained staff'] },
-  { Icon: Globe,          tag: 'Placement', title: 'University Placement',    desc: 'We match you to the right institution across 20+ accredited universities in the UK, Canada, and USA — based on your grades, goals, and budget.',                     pts: ['UK, Canada & US placements', '20+ partner institutions', 'Conditional offer support', 'Course comparison'] },
-  { Icon: FileCheck,      tag: 'Visa',      title: 'Visa Application Guide',  desc: 'From eligibility to submission — we manage every step so your student visa application is precise, complete, and submitted on time with no delays.',                   pts: ['Eligibility assessment', 'Document checklist', 'Application review', 'Interview preparation'] },
-  { Icon: BookOpen,       tag: 'Academic',  title: 'Course Selection',        desc: 'Expert course recommendations matched carefully to your grades, ambitions, timeline, and career trajectory — across hundreds of programmes.',                            pts: ['Programme shortlisting', 'Entry requirements match', 'Personal statement', 'Deadline management'] },
-  { Icon: HomeIcon,       tag: 'Housing',   title: 'Accommodation Advice',    desc: 'Trusted housing options near your campus — student halls, private rentals, and homestay arrangements — all vetted and recommended by our team.',                        pts: ['University halls', 'Private rentals', 'Cost of living guide', 'Neighbourhood tips'] },
-  { Icon: Plane,          tag: 'Travel',    title: 'Pre-Departure & Arrival', desc: 'Flight bookings, airport pickup coordination, pre-departure orientation, and cultural briefings — so you arrive at your destination confident and prepared.',             pts: ['Flight booking assistance', 'Airport pickup', 'Pre-departure briefing', 'Cultural orientation'] },
-  { Icon: Users,          tag: 'Ongoing',   title: 'Post-Enrolment Support',  desc: 'Our relationship does not end at enrolment. We remain your point of contact throughout your study journey — available to resolve issues and provide guidance.',          pts: ['In-country contact', 'Issue resolution', 'Academic check-ins', 'Alumni network access'] },
+  { Icon: Globe,          tag: 'Placement', title: 'University Placement',    desc: 'We match you to the right institution across 20+ accredited universities in the UK, Canada, and USA, based on your grades, goals, and budget.',                     pts: ['UK, Canada & US placements', '20+ partner institutions', 'Conditional offer support', 'Course comparison'] },
+  { Icon: FileCheck,      tag: 'Visa',      title: 'Visa Application Guide',  desc: 'From eligibility to submission. We manage every step so your application is precise and on time.',                   pts: ['Eligibility assessment', 'Document checklist', 'Application review', 'Interview preparation'] },
+  { Icon: BookOpen,       tag: 'Academic',  title: 'Course Selection',        desc: 'Expert course recommendations matched carefully to your grades, ambitions, timeline, and career trajectory, across hundreds of programmes.',                            pts: ['Programme shortlisting', 'Entry requirements match', 'Personal statement', 'Deadline management'] },
+  { Icon: HomeIcon,       tag: 'Housing',   title: 'Accommodation Advice',    desc: 'Trusted housing options near your campus : student halls, private rentals, and homestay arrangements, all vetted by our team.',                        pts: ['University halls', 'Private rentals', 'Cost of living guide', 'Neighbourhood tips'] },
+  { Icon: Plane,          tag: 'Travel',    title: 'Pre-Departure & Arrival', desc: 'Flight bookings, airport pickup coordination, pre-departure orientation, and cultural briefings, so you arrive confident and prepared.',             pts: ['Flight booking assistance', 'Airport pickup', 'Pre-departure briefing', 'Cultural orientation'] },
+  { Icon: Users,          tag: 'Ongoing',   title: 'Post-Enrolment Support',  desc: 'Our relationship does not end at enrolment. We remain your point of contact throughout your study journey, available to resolve issues and provide guidance.',          pts: ['In-country contact', 'Issue resolution', 'Academic check-ins', 'Alumni network access'] },
 ]
 
 export default function ServicesPage() {
@@ -99,7 +99,7 @@ export default function ServicesPage() {
               Designed Around the<br /><em style={{ color: '#C8A964' }}>Student Experience</em>
             </h2>
             {[
-              { n: '01', t: 'Comprehensive Advice', d: 'Holistic guidance for the full duration of your studies in the UK, Canada, and USA — from first enquiry to graduation.' },
+              { n: '01', t: 'Comprehensive Advice', d: 'Holistic guidance for the full duration of your studies in the UK, Canada, and USA, from first enquiry to graduation.' },
               { n: '02', t: 'Purpose-Driven Team',  d: 'We adapt quickly, understand diverse environments, and are people, culture, and language-friendly.' },
               { n: '03', t: 'Trust in Education',   d: 'We believe deeply in the value of international education and convey that trust to every student we work with.' },
             ].map(c => (
@@ -131,7 +131,7 @@ export default function ServicesPage() {
             Ready to Explore Your <em style={{ color: '#C8A964' }}>Options?</em>
           </h2>
           <p style={{ color: '#6b8e7f', fontSize: 14, lineHeight: 1.8, marginBottom: 28, fontFamily: 'Inter, sans-serif' }}>
-            Speak directly with one of our advisors — completely free.
+            Speak directly with one of our advisors, completely free.
           </p>
           <Link href="/contact" className="btn-primary">Book Free Consultation</Link>
         </FadeUp>

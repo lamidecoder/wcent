@@ -39,8 +39,8 @@ export default function AboutPage() {
               Built on First-Hand<br /><em style={{ color:'#C8A964' }}>Experience</em>
             </h2>
             {['Withcent Global was established in 2010 in Abuja, Nigeria to meet the growing demand for overseas university education, duly incorporated in Nigeria.',
-              'Our founders are British Council trained agents with 10+ years\' experience who themselves studied in the UK — gaining first-hand knowledge of the challenges Nigerian students face abroad.',
-              'Those experiences became the incentive to establish Withcent Global — to guide students in adapting to life and study in a different culture.'].map((p,i)=>(
+              'Our founders are British Council trained agents with 10+ years\' experience who themselves studied in the UK, gaining first-hand knowledge of the challenges Nigerian students face abroad.',
+              'Those experiences became the incentive to establish Withcent Global, to guide students in adapting to life and study in a different culture.'].map((p,i)=>(
               <p key={i} style={{ color:'#4d6b5a', fontSize:13.5, lineHeight:1.82, fontFamily:'Inter,sans-serif', marginBottom:12 }}>{p}</p>
             ))}
             <div className="col-2" style={{ gap:10, marginTop:6 }}>
@@ -57,7 +57,7 @@ export default function AboutPage() {
         <Stagger className="col-3" style={{ marginTop:'3.5rem' }}>
           {[
             { Icon:Target, t:'Our Mission', d:'To provide prompt, efficient, reliable and high-quality services for every student seeking educational advancement abroad.' },
-            { Icon:Heart,  t:'Our Values',  d:'We value diversity, inclusion, and genuine care for every client. We treat students as partners — not transactions.' },
+            { Icon:Heart,  t:'Our Values',  d:'We value diversity, inclusion, and genuine care for every client. We treat students as partners, not transactions.' },
             { Icon:Users,  t:'Our Vision',  d:'To be Africa\'s foremost education advisory firm, recognised for integrity, expertise, and transformative outcomes.' },
           ].map(({Icon,t,d},i)=>(
             <Item key={i}>
@@ -86,7 +86,7 @@ export default function AboutPage() {
             <p style={{ color:'#a8c4b4', fontSize:14, lineHeight:1.85, marginBottom:14, fontFamily:'Inter,sans-serif' }}>Our team consists of experienced education counsellors ready to advise students on courses and career opportunities based on their educational background, interests, aptitude, and aspirations.</p>
             <p style={{ color:'#a8c4b4', fontSize:14, lineHeight:1.85, fontFamily:'Inter,sans-serif' }}>Having a broad network with education providers, we suggest a wide range of study options to meet each student&apos;s individual needs. We adapt quickly and are people, culture, and language-friendly.</p>
             <div className="col-3" style={{ marginTop:28, borderTop:'1px solid rgba(245,241,230,.07)', paddingTop:24 }}>
-              {[{n:'10+',l:'Years Experience'},{n:'500+',l:'Students Helped'},{n:'20+',l:'Partner Unis'}].map((s,i)=>(
+              {[{n:'10+',l:'Years Experience'},{n:'3,000+',l:'Students Helped'},{n:'20+',l:'Partner Unis'}].map((s,i)=>(
                 <div key={s.l} style={{ textAlign:'center', borderRight:i<2?'1px solid rgba(245,241,230,.07)':'none', padding:'0 10px' }}>
                   <div className="fd" style={{ fontSize:'2rem', fontWeight:300, color:'#C8A964', lineHeight:1 }}>{s.n}</div>
                   <div style={{ fontSize:'.58rem', color:'#6b8e7f', letterSpacing:'.15em', textTransform:'uppercase', marginTop:6, fontFamily:'Inter,sans-serif' }}>{s.l}</div>

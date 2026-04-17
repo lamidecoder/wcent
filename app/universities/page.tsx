@@ -5,7 +5,7 @@ import { FadeUp, SlideIn, Stagger, Item } from '@/components/Animate'
 import Img from '@/components/Img'
 
 const UNIS = [
-  { name:'University of Wolverhampton', loc:'West Midlands, UK', country:'UK', badge:'Primary Partner', year:'1992', img:'https://images.unsplash.com/photo-1562774053-701939374585?w=700&q=80', progs:['Business','Engineering','Health','Law'], desc:'Our flagship UK partner — hundreds of Nigerian students placed successfully.' },
+  { name:'University of Wolverhampton', loc:'West Midlands, UK', country:'UK', badge:'Primary Partner', year:'1992', img:'https://images.unsplash.com/photo-1562774053-701939374585?w=700&q=80', progs:['Business','Engineering','Health','Law'], desc:'Our flagship UK partner. Hundreds of Nigerian students placed successfully.' },
   { name:'University of Hertfordshire',  loc:'Hatfield, UK',      country:'UK', badge:'Partner',         year:'1952', img:'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=700&q=80', progs:['Business','Media','Life Sciences','Education'], desc:'Renowned for business, media and life sciences programmes.' },
   { name:'Coventry University',          loc:'Coventry, UK',       country:'UK', badge:'Partner',         year:'1843', img:'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=700&q=80', progs:['Engineering','Business','Computing','Health'], desc:'Award-winning modern university with strong industry links.' },
   { name:'University of East London',    loc:'London, UK',         country:'UK', badge:'Partner',         year:'1898', img:'https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=700&q=80', progs:['Social Sciences','Arts','Business','Psychology'], desc:'Located in the heart of Europe\'s greatest city.' },

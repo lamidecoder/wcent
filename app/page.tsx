@@ -9,10 +9,10 @@ import Img from '@/components/Img'
 const SERVICES = [
   { Icon: GraduationCap, title: 'Education Counselling',    desc: 'Personalised guidance from British Council-trained advisors. One counsellor, with you from first meeting to enrolment.' },
   { Icon: Globe,          title: 'University Placement',     desc: 'We match you to the right institution across 20+ accredited universities in the UK, Canada, and USA.' },
-  { Icon: FileCheck,      title: 'Visa Application Guide',   desc: 'From eligibility to submission — we manage every step so your visa application is precise and on time.' },
+  { Icon: FileCheck,      title: 'Visa Application Guide',   desc: 'From eligibility to submission. We manage every step so your application is precise and on time.' },
   { Icon: BookOpen,       title: 'Course Selection',         desc: 'Expert course recommendations matched to your grades, ambitions, and career timeline.' },
-  { Icon: HomeIcon,       title: 'Accommodation Advice',     desc: 'Trusted housing options near your campus — halls, private rentals, and homestay arrangements.' },
-  { Icon: Plane,          title: 'Pre-Departure & Arrival',  desc: 'Flight bookings, airport pickup, cultural briefing, and orientation — so you arrive ready.' },
+  { Icon: HomeIcon,       title: 'Accommodation Advice',     desc: 'Trusted housing options near your campus: halls, private rentals, and homestay arrangements.' },
+  { Icon: Plane,          title: 'Pre-Departure & Arrival',  desc: 'Flight bookings, airport pickup, cultural briefing, and orientation, so you arrive ready.' },
 ]
 
 export default function HomePage() {
@@ -57,28 +57,28 @@ export default function HomePage() {
 
                 <motion.p initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: .28 }}
                   style={{ color: '#8aab9a', fontSize: '1rem', lineHeight: 1.85, maxWidth: 480, marginBottom: 36 }}>
-                  Withcent Global guides ambitious students from Africa to the world&apos;s most respected institutions — not as an agency processing applications, but as a partner walking beside you.
+                  Withcent Global guides ambitious students from Africa to the world&apos;s most respected institutions, helping you secure your place at a world-class institution.
                 </motion.p>
 
                 <motion.div className="btn-row" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7, delay: .36 }}
                   style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 52 }}>
-                  <Link href="/contact" className="btn-primary pulse"><Sparkles size={13} /> Start Your Ascent</Link>
+                  <Link href="/contact" className="btn-primary pulse"><Sparkles size={13} /> Begin Your Journey</Link>
                   <Link href="/services" className="btn-ghost">Our Services <ArrowRight size={12} /></Link>
                 </motion.div>
 
                 {/* Stats */}
                 <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .8, delay: .5 }}
                   style={{ borderTop: '1px solid rgba(200,169,100,.15)', paddingTop: 28 }}>
-                  <div className="col-stats" style={{ maxWidth: 380 }}>
+                  <div style={{ display: 'flex', gap: 0 }}>
                     {[
-                      { n: '500+', l: 'Students Placed',  Icon: Users },
-                      { n: '10+',  l: 'Years Experience',  Icon: TrendingUp },
-                      { n: '20+',  l: 'Partner Universities', Icon: GraduationCap },
+                      { n: '3,000+', l: 'Students Placed',  Icon: Users },
+                      { n: '10+',    l: 'Years Experience',  Icon: TrendingUp },
+                      { n: '20+',    l: 'Partner Universities', Icon: GraduationCap },
                     ].map((s, i) => (
-                      <div key={s.l} style={{ textAlign: 'center', borderRight: i < 2 ? '1px solid rgba(200,169,100,.12)' : 'none', padding: '0 10px' }}>
+                      <div key={s.l} style={{ textAlign: 'center', borderRight: i < 2 ? '1px solid rgba(200,169,100,.12)' : 'none', padding: '0 14px', flex: 1 }}>
                         <s.Icon size={13} color="#C8A964" style={{ margin: '0 auto 6px', display: 'block' }} />
-                        <div className="fd" style={{ fontSize: '1.9rem', fontWeight: 300, color: '#C8A964', lineHeight: 1 }}>{s.n}</div>
-                        <div style={{ fontSize: '.55rem', color: '#4d7060', letterSpacing: '.14em', textTransform: 'uppercase', marginTop: 5, fontFamily: 'Inter, sans-serif' }}>{s.l}</div>
+                        <div className="fd" style={{ fontSize: 'clamp(1.4rem,3.5vw,1.9rem)', fontWeight: 300, color: '#C8A964', lineHeight: 1 }}>{s.n}</div>
+                        <div style={{ fontSize: '.52rem', color: '#4d7060', letterSpacing: '.12em', textTransform: 'uppercase', marginTop: 5, fontFamily: 'Inter, sans-serif' }}>{s.l}</div>
                       </div>
                     ))}
                   </div>
@@ -144,7 +144,7 @@ export default function HomePage() {
           </FadeUp>
           <Stagger className="col-services">
             {[
-              { name: 'University of Wolverhampton', loc: 'West Midlands, UK', badge: 'Primary Partner', img: 'https://images.unsplash.com/photo-1562774053-701939374585?w=700&q=80', desc: 'Our flagship UK partner — hundreds of Nigerians placed successfully.' },
+              { name: 'University of Wolverhampton', loc: 'West Midlands, UK', badge: 'Primary Partner', img: 'https://images.unsplash.com/photo-1562774053-701939374585?w=700&q=80', desc: 'Our flagship UK partner. Hundreds of Nigerians placed successfully.' },
               { name: 'Coventry University',          loc: 'Coventry, UK',      badge: 'Partner',         img: 'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=700&q=80', desc: 'Award-winning modern university with strong industry links.' },
               { name: 'University of Hertfordshire',  loc: 'Hatfield, UK',      badge: 'Partner',         img: 'https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?w=700&q=80', desc: 'Renowned for business, media, and life sciences.' },
               { name: 'University of East London',    loc: 'London, UK',        badge: 'Partner',         img: 'https://images.unsplash.com/photo-1516979187457-637abb4f9353?w=700&q=80', desc: 'Located in the heart of Europe\'s greatest city.' },
@@ -190,7 +190,7 @@ export default function HomePage() {
                 Founded on the <em style={{ color: '#C8A964', fontStyle: 'italic' }}>belief</em> that ascent is never a solo climb.
               </h2>
               <p style={{ color: '#4d7060', fontSize: 14, lineHeight: 1.85, marginBottom: 28, borderLeft: '2px solid #C8A964', paddingLeft: 16 }}>
-                Withcent Global guides ambitious students from Africa to the world&apos;s most respected institutions — not as an agency processing applications, but as a partner walking beside them.
+                Withcent Global guides ambitious students from Africa to the world&apos;s most respected institutions, helping every student secure their place at a world-class institution.
               </p>
               <p style={{ color: '#6b8e7f', fontSize: 13.5, lineHeight: 1.85, marginBottom: 32 }}>
                 From first course-match to visa stamp, we bring clarity, care, and credibility to a process that too often delivers the opposite. Admissions become less about luck — more about what&apos;s earned.
@@ -199,8 +199,8 @@ export default function HomePage() {
                 {[
                   { img: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400&q=75', cap: 'Campus Life' },
                   { img: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=400&q=75', cap: 'Counselling' },
-                  { img: 'https://cdn-wlvacuk.terminalfour.net/media/img2.jpg', cap: 'University' },
-                  { img: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=400&q=75', cap: 'Graduation' },
+                  { img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=75', cap: 'University' },
+                  { img: 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=400&q=75', cap: 'Graduation' },
                 ].map((p, i) => (
                   <motion.div key={i} whileHover={{ scale: 1.03 }} style={{ position: 'relative', height: 95, overflow: 'hidden', cursor: 'pointer' }}>
                     <Img src={p.img} alt={p.cap} fill />
@@ -213,20 +213,19 @@ export default function HomePage() {
             </SlideIn>
             <SlideIn from="right">
               <div style={{ position: 'relative' }}>
-                <div style={{ position: 'relative', height: 320, overflow: 'hidden', background: '#0F3D2E' }}>
-                  <Img src="https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=900&q=70" alt="Students" fill style={{ opacity: .6 }} />
-                  <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom,rgba(8,27,21,.2),rgba(8,27,21,.65))' }} />
-                  <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <a href="https://www.youtube.com/results?search_query=study+in+uk+nigerian+students" target="_blank" rel="noopener noreferrer">
-                      <motion.div whileHover={{ scale: 1.08 }} whileTap={{ scale: .96 }}
-                        style={{ width: 68, height: 68, borderRadius: '50%', background: 'rgba(200,169,100,.16)', border: '1.5px solid rgba(200,169,100,.6)', display: 'flex', alignItems: 'center', justifyContent: 'center', cursor: 'pointer', backdropFilter: 'blur(8px)' }}>
-                        <Play color="#C8A964" size={24} fill="#C8A964" style={{ marginLeft: 3 }} />
-                      </motion.div>
-                    </a>
+                <div style={{ position: 'relative', overflow: 'hidden', background: '#081B15' }}>
+                  <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden' }}>
+                    <iframe
+                      src="https://www.youtube.com/embed/w0okE_Det0A?rel=0&modestbranding=1"
+                      title="Life as a Nigerian Student in the UK"
+                      allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
+                    />
                   </div>
-                  <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '14px 18px', background: 'linear-gradient(transparent,rgba(8,27,21,.9))' }}>
-                    <p className="fd" style={{ color: '#F5F1E6', fontSize: 15, fontStyle: 'italic' }}>Life as a Nigerian Student in the UK</p>
-                    <p style={{ color: '#C8A964', fontSize: '.56rem', letterSpacing: '.18em', textTransform: 'uppercase', marginTop: 4, fontFamily: 'Inter, sans-serif' }}>Watch to learn more</p>
+                  <div style={{ padding: '12px 16px', background: '#081B15', borderTop: '1px solid rgba(200,169,100,.1)' }}>
+                    <p className="fd" style={{ color: '#F5F1E6', fontSize: 14, fontStyle: 'italic' }}>Life as a Nigerian Student in the UK</p>
+                    <p style={{ color: '#C8A964', fontSize: '.55rem', letterSpacing: '.18em', textTransform: 'uppercase', marginTop: 4, fontFamily: 'Inter, sans-serif' }}>Click to watch</p>
                   </div>
                 </div>
                 <div className="col-vid-3">
@@ -298,10 +297,10 @@ export default function HomePage() {
               {[
                 'British Council trained & certified education advisors',
                 'Over 10 years of proven placement track record',
-                'One dedicated advisor — with you from first call to graduation',
+                'One dedicated advisor, with you from first call to graduation',
                 'In-country support network in the UK, Canada & USA',
-                'Member of WEBA — World Educate Business Association',
-                'Free initial consultation — no commitment required',
+                'Member of WEBA: World Educate Business Association',
+                'Free initial consultation, no commitment required',
               ].map(p => (
                 <Item key={p}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 11 }}>
@@ -321,7 +320,7 @@ export default function HomePage() {
         <div className="wrap">
           <Stagger className="col-stats">
             {[
-              { n: '500+', l: 'Students Placed',     sub: 'And growing' },
+              { n: '3,000+', l: 'Students Placed',     sub: 'And growing' },
               { n: '10+',  l: 'Years Experience',     sub: 'Since 2010' },
               { n: '3',    l: 'Continents',           sub: 'UK · CA · USA' },
               { n: '20+',  l: 'Partner Universities', sub: 'Expanding network' },
@@ -344,7 +343,7 @@ export default function HomePage() {
           <FadeUp style={{ textAlign: 'center', marginBottom: 48 }}>
             <p className="eyebrow" style={{ marginBottom: 12 }}>Student Stories</p>
             <h2 className="fd" style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 300, color: '#0F3D2E' }}>
-              Every student, <em style={{ color: '#C8A964' }}>a partner in ascent.</em>
+              Every student, <em style={{ color: '#C8A964' }}>a partner in your journey.</em>
             </h2>
             <div className="gold-line" style={{ margin: '13px auto 0', background: 'linear-gradient(90deg,#0F3D2E,#C8A964)' }} />
           </FadeUp>
@@ -382,7 +381,7 @@ export default function HomePage() {
           <FadeUp style={{ textAlign: 'center', marginBottom: 48 }}>
             <p className="eyebrow" style={{ marginBottom: 12 }}>How It Works</p>
             <h2 className="fd" style={{ fontSize: 'clamp(1.8rem,4vw,3rem)', fontWeight: 300, color: '#0F3D2E' }}>
-              Your ascent in <em style={{ color: '#C8A964' }}>4 steps.</em>
+              Your journey in <em style={{ color: '#C8A964' }}>4 steps.</em>
             </h2>
           </FadeUp>
           <div className="col-steps">
@@ -427,7 +426,7 @@ export default function HomePage() {
               Where <em style={{ color: '#C8A964' }}>ambition</em><br />meets <em style={{ color: '#C8A964' }}>admission.</em>
             </h2>
             <p style={{ color: '#6b8e7f', maxWidth: 460, margin: '0 auto 40px', fontSize: 14, lineHeight: 1.85, fontFamily: 'Inter, sans-serif' }}>
-              Book a free consultation today. Our advisors are ready to walk beside you — every step of the way up.
+              Book a free consultation today. Our advisors are ready to walk beside you, every step of the way.
             </p>
             <div className="btn-row" style={{ display: 'flex', justifyContent: 'center', gap: 12, flexWrap: 'wrap' }}>
               <Link href="/contact" className="btn-primary pulse"><Sparkles size={13} /> Book Free Consultation</Link>
