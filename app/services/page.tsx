@@ -42,7 +42,7 @@ function SvcCard({ Icon, tag, title, desc, pts }: { Icon: LucideIcon; tag: strin
       {/* Body */}
       <p style={{ color: '#4d6b5a', fontSize: 13.5, lineHeight: 1.8, marginBottom: 20, fontFamily: 'Inter, sans-serif' }}>{desc}</p>
       {/* Points */}
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px 16px' }}>
+      <div className='col-pts'>
         {pts.map(p => (
           <div key={p} style={{ display: 'flex', alignItems: 'center', gap: 7, fontSize: 12.5, color: '#3d5a4a', fontFamily: 'Inter, sans-serif' }}>
             <CheckCircle size={12} color="#0F3D2E" style={{ flexShrink: 0 }} />{p}
@@ -83,7 +83,7 @@ export default function ServicesPage() {
     {/* Services Grid */}
     <section style={{ background: '#F5F1E6', padding: '5rem 0' }}>
       <div className="wrap">
-        <Stagger style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }} className="col-2">
+        <Stagger className='col-2'>
           {SVCS.map((s, i) => <Item key={i}><SvcCard {...s} /></Item>)}
         </Stagger>
       </div>

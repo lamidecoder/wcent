@@ -318,3 +318,41 @@ body{
   .lcard { padding: 22px 18px; }
   .pad-section { padding: 3.5rem 0; }
 }
+
+/* ── Service card checklist points ── */
+.col-pts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 16px;
+}
+
+/* ── col-2 enforced (no inline override) ── */
+.col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .col-2   { grid-template-columns: 1fr !important; }
+  .col-pts { grid-template-columns: 1fr !important; }
+  .col-services { grid-template-columns: 1fr !important; }
+  .col-about    { grid-template-columns: 1fr !important; gap: 36px !important; margin-bottom: 40px !important; }
+  .col-contact  { grid-template-columns: 1fr !important; }
+  .col-2-wide   { grid-template-columns: 1fr !important; gap: 32px !important; }
+  .col-3        { grid-template-columns: 1fr !important; }
+  .col-steps    { grid-template-columns: 1fr 1fr !important; gap: 20px !important; }
+  .col-stats    { grid-template-columns: 1fr 1fr !important; }
+  .col-footer   { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+  .col-blog-featured { grid-template-columns: 1fr !important; }
+  .col-form-2   { grid-template-columns: 1fr !important; }
+  .col-vid-3    { grid-template-columns: 1fr 1fr !important; }
+  .col-img-4    { grid-template-columns: 1fr 1fr !important; }
+}
+
+@media (max-width: 480px) {
+  .col-steps  { grid-template-columns: 1fr !important; }
+  .col-stats  { grid-template-columns: 1fr 1fr !important; }
+  .col-footer { grid-template-columns: 1fr !important; }
+  .col-vid-3  { grid-template-columns: 1fr !important; }
+}

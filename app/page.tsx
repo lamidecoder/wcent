@@ -89,7 +89,7 @@ export default function HomePage() {
               <FadeIn delay={.32} className="hero-img-hide">
                 <div className="float" style={{ position: 'relative', height: 520 }}>
                   <div style={{ position: 'absolute', top: 0, left: 40, right: 0, height: 380, overflow: 'hidden' }}>
-                    <Img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=85" alt="University campus" fill priority />
+                    <Img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/08/08/11/wolverhampton.jpg?width=1200" alt="University campus" fill priority />
                     <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom,transparent 50%,rgba(8,27,21,.9) 100%)' }} />
                   </div>
                   <div style={{ position: 'absolute', bottom: 60, left: 0, width: 160, height: 130, overflow: 'hidden', border: '2px solid rgba(200,169,100,.4)', zIndex: 2 }}>
@@ -199,7 +199,7 @@ export default function HomePage() {
                 {[
                   { img: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400&q=75', cap: 'Campus Life' },
                   { img: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=400&q=75', cap: 'Counselling' },
-                  { img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=75', cap: 'University' },
+                  { img: 'https://cdn-wlvacuk.terminalfour.net/media/img2.jpg', cap: 'University' },
                   { img: 'https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=400&q=75', cap: 'Graduation' },
                 ].map((p, i) => (
                   <motion.div key={i} whileHover={{ scale: 1.03 }} style={{ position: 'relative', height: 95, overflow: 'hidden', cursor: 'pointer' }}>
