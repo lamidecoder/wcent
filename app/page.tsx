@@ -199,7 +199,7 @@ export default function HomePage() {
                 {[
                   { img: 'https://images.unsplash.com/photo-1543269865-cbf427effbad?w=400&q=75', cap: 'Campus Life' },
                   { img: 'https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=400&q=75', cap: 'Counselling' },
-                  { img: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&q=75', cap: 'University' },
+                  { img: 'https://cdn-wlvacuk.terminalfour.net/media/img2.jpg', cap: 'University' },
                   { img: 'https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?w=400&q=75', cap: 'Graduation' },
                 ].map((p, i) => (
                   <motion.div key={i} whileHover={{ scale: 1.03 }} style={{ position: 'relative', height: 95, overflow: 'hidden', cursor: 'pointer' }}>
