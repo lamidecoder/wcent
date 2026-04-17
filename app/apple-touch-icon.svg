@@ -1,6 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
-  <rect width="180" height="180" fill="#07101f"/>
-  <rect x="8" y="8" width="164" height="164" fill="none" stroke="#c9a84c" stroke-width="4"/>
-  <rect x="134" y="134" width="28" height="28" fill="#c9a84c" opacity="0.6"/>
-  <text x="90" y="128" font-family="Georgia, serif" font-size="100" font-weight="600" fill="#c9a84c" text-anchor="middle">W</text>
+  <rect width="180" height="180" fill="#0F3D2E"/>
+  <polyline points="22,130 90,50 158,130" stroke="#C8A964" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <polyline points="38,155 90,95 142,155" stroke="#C8A964" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.55"/>
 </svg>

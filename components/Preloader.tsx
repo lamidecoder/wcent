@@ -34,7 +34,7 @@ export default function Preloader() {
           transition={{ duration: 0.5, ease: 'easeInOut' }}
           style={{
             position: 'fixed', inset: 0, zIndex: 9999,
-            background: '#07101f',
+            background: '#081B15',
             display: 'flex', flexDirection: 'column',
             alignItems: 'center', justifyContent: 'center',
             overflow: 'hidden',
@@ -52,7 +52,7 @@ export default function Preloader() {
             <motion.div
               animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.35, 0.15] }}
               transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-              style={{ width: 340, height: 340, borderRadius: '50%', background: 'radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 70%)' }}
+              style={{ width: 340, height: 340, borderRadius: '50%', background: 'radial-gradient(circle, rgba(200,169,100,0.15) 0%, transparent 70%)' }}
             />
           </div>
 
@@ -82,7 +82,7 @@ export default function Preloader() {
                   boxShadow: 'inset 0 0 20px rgba(255,255,255,0.1)',
                 }}>
                   {i === 0 && (
-                    <span style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: 36, fontWeight: 600, color: '#07101f', lineHeight: 1 }}>W</span>
+                    <span style={{ fontFamily: 'Fraunces, serif', fontSize: 36, fontWeight: 600, color: '#081B15', lineHeight: 1 }}>W</span>
                   )}
                 </div>
               ))}
@@ -96,11 +96,11 @@ export default function Preloader() {
             transition={{ delay: 0.3, duration: 0.7 }}
             style={{ textAlign: 'center', marginBottom: 36 }}
           >
-            <div style={{ fontFamily: 'Cormorant Garamond, serif', fontSize: '2rem', fontWeight: 300, color: '#fff', letterSpacing: '.08em', lineHeight: 1.1 }}>
+            <div style={{ fontFamily: 'Fraunces, serif', fontSize: '2rem', fontWeight: 300, color: '#fff', letterSpacing: '.08em', lineHeight: 1.1 }}>
               Withcent
             </div>
             <div style={{ fontSize: '.6rem', color: '#c9a84c', letterSpacing: '.42em', textTransform: 'uppercase', fontFamily: 'Space Grotesk, sans-serif', fontWeight: 700, marginTop: 4 }}>
-              Nigeria
+              Global
             </div>
           </motion.div>
 
@@ -139,7 +139,7 @@ export default function Preloader() {
                 transition={{ duration: 0.75, ease: [0.76, 0, 0.24, 1] }}
                 style={{
                   position: 'absolute', inset: 0,
-                  background: 'linear-gradient(160deg, #07101f 0%, #0c1828 100%)',
+                  background: 'linear-gradient(160deg, #081B15 0%, #0F3D2E 100%)',
                   zIndex: 10,
                 }}
               />
