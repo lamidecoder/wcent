@@ -90,7 +90,7 @@ export default function HomePage() {
               <FadeIn delay={.35} className="hero-img-hide">
                 <div className="float" style={{ position:'relative', height:520 }}>
                   <div style={{ position:'absolute', top:0, left:40, right:0, height:380, overflow:'hidden' }}>
-                    <Img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=85" alt="University campus" fill priority />
+                    <Img src="https://cdn-wlvacuk.terminalfour.net/media/img2.jpg" alt="University campus" fill priority />
                     <div style={{ position:'absolute', inset:0, background:'linear-gradient(to bottom,transparent 50%,rgba(7,16,31,.9) 100%)' }} />
                   </div>
                   <div style={{ position:'absolute', bottom:60, left:0, width:160, height:130, overflow:'hidden', border:'2px solid rgba(201,168,76,.4)', zIndex:2 }}>
